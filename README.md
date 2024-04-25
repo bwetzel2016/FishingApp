@@ -1,6 +1,6 @@
 # Web Development Final Project - *Name of App Here*
 
-Submitted by: **Your Name Here**
+Submitted by: Brandon WEetzel
 
 This web app: **insert description**
 
