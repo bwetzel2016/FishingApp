@@ -26,6 +26,6 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='WeatherApp/public/hw5.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='test/public/hw5.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
