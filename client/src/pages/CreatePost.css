@@ -38,3 +38,12 @@ input[type=submit] {
 input[type=submit]:hover {
     border-color: #646cff;
 }
+
+.homeBtn {
+    position: absolute; /* Add this line */
+    right: 500px; /* Add this line */
+}
+
+.header {
+    margin-top: 59px;
+}

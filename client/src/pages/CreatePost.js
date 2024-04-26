@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './CreatePost.css'
 import { supabase } from '../client'
-
+import { Link } from 'react-router-dom';
 const CreatePost = () => {
 
     const [post, setPost] = useState({title: "", author: "", description: "", color:"" })
@@ -31,20 +31,24 @@ const CreatePost = () => {
 
     return (
         <div>
+            <Link to="/"><button className="headerBtn homeBtn"> Home  </button></Link>
+            <div className="header">
             <form>
-                <label for="title">Title</label> <br />
+                
+                <label htmlFor="title">Title</label> <br />
                 <input type="text" id="title" name="title" onChange={handleChange} /><br />
                 <br/>
-
-                <label for="author">Author(Mph)</label><br />
+    
+                <label htmlFor="author">Author(Mph)</label><br />
                 <input type="text" id="author" name="author" onChange={handleChange} /><br />
                 <br/>
-
-                <label for="description">Description</label><br />
-                <input type="text" id="author" name="author" onChange={handleChange} /><br />
+    
+                <label htmlFor="description">Description</label><br />
+                <input type="text" id="description" name="description" onChange={handleChange} /><br />
                 <br/>
-<input type="submit" value="Submit" onClick={createPost} />
+                <input type="submit" value="Submit" onClick={createPost} />
             </form>
+            </div>
         </div>
     )
 }
