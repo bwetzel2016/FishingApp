@@ -22,24 +22,25 @@ const ReadPosts = () => {
     return (
         <div className="ReadPosts">
             <div className="header">
-            <h1>👍 Bet 1.0</h1>
+            <h1>Catch of the Day: The Ultimate Fishing Community</h1>
             <div className="header-buttons">
         <Link to="/"><button className="headerBtn"> Home  </button></Link>
         <Link to="/new"><button className="headerBtn"> Create Post 🏆 </button></Link>
         </div><br />
         </div><br />
         {
-  posts && posts.length > 0 ?
-  posts.map((post,index) => 
-    <Card 
-      key={post.id} // Add this line
-      id={post.id} 
-      title={post.title} 
-      author={post.author} 
-      description={post.description}
-    />
-  ) : <h2>{'No Challenges Yet 😞'}</h2>
-}
+            posts && posts.length > 0 ?
+            posts.map((post) => 
+                <Card 
+                    key={post.id} // Add this line
+                    id={post.id} 
+                    title={post.title} 
+                    author={post.author} 
+                    description={post.description}
+                />
+            ) : <div className="noPosts">No Posts</div> // Add this line
+        }
+        
         </div>  
     )
 }

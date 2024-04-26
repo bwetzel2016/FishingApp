@@ -1,17 +1,23 @@
 .App {
+  height: 100vh;
   font-family:Avenir, "Century Gothic", sans-serif;
   font-weight:100; 
   font-style:normal;
   font-size: calc(10px + 2vmin);
   color: white;
   justify-content: center;
-  background-color: rgba(231, 213, 213, 0.962);
+  background-color: rgba(140, 158, 186, 0.962);
   padding:20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+}
+
+body {
+  height: 100vh;
+  background-color: transparent; /* Remove the background color */
 }
 
 .header{

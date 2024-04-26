@@ -9,7 +9,7 @@ input {
 }
 
 label {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 textarea {
@@ -29,21 +29,49 @@ input[type=submit] {
     font-weight: 500;
     font-family: inherit;
     background-color: #1a1a1a;
-    color:white;
+    color:rgb(0, 0, 0);
     cursor: pointer;
     transition: border-color 0.25s;
+    
     margin-top: 20px;
   }
 
 input[type=submit]:hover {
-    border-color: #646cff;
+    border-color: #0d103a;
 }
 
 .homeBtn {
     position: absolute; /* Add this line */
     right: 500px; /* Add this line */
+    top: 20px;
+    
 }
 
 .header {
-    margin-top: 59px;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 10rem;
+    margin-left: -140px;
+    font-size: 20px;
+    
+
+
+}
+
+.form  {
+    font-size: 30px; /* Replace 20px with the font size you want */
+    
+}
+
+.input-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 280px; /* Adjust the padding as needed */
+}
+
+.input-container input {
+    width: 13rem; /* Set the width to 100% to make it fill the container */
+    height: 45px; /* Adjust the height as needed */
+    font-size: 20px; /* Adjust the font size as needed */
 }

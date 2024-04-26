@@ -33,24 +33,26 @@ const CreatePost = () => {
         <div>
             <Link to="/"><button className="headerBtn homeBtn"> Home  </button></Link>
             <div className="header">
-            <form>
-                
-                <label htmlFor="title">Title</label> <br />
-                <input type="text" id="title" name="title" onChange={handleChange} /><br />
-                <br/>
+                <form>
+                    <div className="input-container">
+                        <label htmlFor="title">Title</label> <br />
+                        <input type="text" id="title" name="title" onChange={handleChange} /><br />
+                        <br/>
     
-                <label htmlFor="author">Author(Mph)</label><br />
-                <input type="text" id="author" name="author" onChange={handleChange} /><br />
-                <br/>
+                        <label htmlFor="author">Author(Mph)</label><br />
+                        <input type="text" id="author" name="author" onChange={handleChange} /><br />
+                        <br/>
     
-                <label htmlFor="description">Description</label><br />
-                <input type="text" id="description" name="description" onChange={handleChange} /><br />
-                <br/>
-                <input type="submit" value="Submit" onClick={createPost} />
-            </form>
+                        <label htmlFor="description">Description</label><br />
+                        <input type="text" id="description" name="description" onChange={handleChange} /><br />
+                        <br/>
+                    </div>
+                    <input type="submit" value="Submit" onClick={createPost} />
+                </form>
             </div>
         </div>
     )
+    
 }
 
 export default CreatePost
