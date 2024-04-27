@@ -10,6 +10,11 @@
     text-align: center;
 }
 
+.Card a {
+    /* Remove underline */
+    text-decoration: none;
+  }
+
 .title {
     color:white;
     padding-left:30px;
@@ -21,6 +26,16 @@
     margin-bottom: 20px;
     font-size: 20px;
 }
+
+
+
+/* Card.css */
+.photo {
+    width: 40%; /* Adjust the percentage to make the photo smaller */
+    height: auto; /* This will maintain the aspect ratio of the image */
+}
+
+
 
 .description {
     color:white;  

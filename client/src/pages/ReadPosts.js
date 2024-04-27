@@ -20,28 +20,32 @@ const ReadPosts = () => {
     }, []);
 
     return (
+        
         <div className="ReadPosts">
-            <div className="header">
-            <h1>Catch of the Day: The Ultimate Fishing Community</h1>
-            <div className="header-buttons">
-        <Link to="/"><button className="headerBtn"> Home  </button></Link>
+
+            
+    <div className="ReadPosts-Header">
+    <div className="header-buttons">
+        <Link to="/"><button className="headerBtn"> Home </button></Link>
         <Link to="/new"><button className="headerBtn"> Create Post 🏆 </button></Link>
-        </div><br />
-        </div><br />
+    </div>
+        <h1>Catch of the Day: The Ultimate Fishing Community</h1>
         {
             posts && posts.length > 0 ?
             posts.map((post) => 
                 <Card 
-                    key={post.id} // Add this line
+                    key={post.id} 
                     id={post.id} 
-                    title={post.title} 
-                    author={post.author} 
+                    name={post.name} 
+                    location={post.location} 
                     description={post.description}
+                    photo={post.photo}
                 />
-            ) : <div className="noPosts">No Posts</div> // Add this line
+            ) : <div className="noPosts">No Posts</div>
         }
-        
-        </div>  
+    </div>
+</div>
+ 
     )
 }
 
@@ -57,5 +61,19 @@ export default ReadPosts;
         <Link to="/"><button className="headerBtn"> Explore Challenges 🔍  </button></Link>
         <Link to="/new"><button className="headerBtn"> Submit Challenfffge 🏆 </button></Link>
       </div>
+
+
+
+
+
+ key={post.id} // Add this line
+                    id={post.id} 
+                    name={post.title} 
+                    author={post.author} 
+                    description={post.description}
+
+
+
+
 
       */

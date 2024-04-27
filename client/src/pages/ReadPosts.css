@@ -1,38 +1,48 @@
 .ReadPosts {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-.header {
-    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-bottom: -200px; /* Adjusted margin-bottom */
-    right: -305px;
-    top: -300px;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align the content horizontally */
+    align-items: flex-start; /* Align items to the top */
+    padding-top: 10px; /* Add some top padding */
+    min-height: calc(100vh - 100px); /* Set a minimum height to ensure content visibility */
 }
 
-.header-buttons {
-    position: absolute;
-    right: -450px;
-    top: -5px; /* Add this line to move it up */
+
+
+
+.ReadPosts-Header {
+    color: #1d3557;
+    top: 0; /* Ensures the header sticks at the top of the viewport */
+    background-color: transparent; /* Background color for the header */
+    z-index: 1; /* Ensures the header stays above other content */
+    padding: 1px 20px 300px 150px; /* Add some left padding */
+    text-align: center; /* Align text to the center */
+    width: 100%; /* Ensure the header spans the entire width */
+     top: 100px;
+     
 }
 
 .header h1 {
-    font-size: 28px;
-    color: #3d5a80; /* Dark blue */
-    margin-left: 20px; /* Adjust the value as needed */
+    margin: 0; /* Remove any default margin */
+    display: inline-block; /* Make the header inline block to center it */
+    width: 120%; /* Ensure the title takes the full width */
     
 }
+.header-buttons {
+    display: flex;
+    justify-content: flex-end; /* Move buttons to the right */
+    padding: 10px 20px; /* Add padding to the container */
+}
+
 
 .headerBtn {
-    padding: 10px 20px;
+    padding: 5px 20px; /* Adjust the padding to make the buttons smaller */
     font-size: 16px;
     background-color: #98c1d9; /* Light blue */
-    color: #fff;
+    color: #7e2929;
+    margin-left: auto; /* Move the buttons to the right */
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -48,24 +58,30 @@
     
 }
 
+
+
 .Card {
     background-color: #e0fbfc; /* Light cyan */
-    border: 1px solid #a8dadc; /* Light blue */
+    border: 5px solid #a8dadc; /* Light blue */
     border-radius: 10px;
-    padding: 20px;
-    
+    padding: 2px;
+    width: 70%; /* Adjust the width to make the card smaller */
+    max-height: 200px; /* Set a maximum height for the card */
+    margin-bottom: 20px; /* Add bottom margin */
+    margin-left: 200px;
 }
-
 .Card h3 {
     margin-top: 20px;
     font-size: 20px;
     color: #3d5a80; /* Dark blue */
+    
 }
 
 .Card p {
     margin-bottom: 10px;
     font-size: 16px;
     color: #1d3557; /* Navy blue */
+    
 }
 
 .Card .author {
@@ -81,6 +97,15 @@
     margin-top: 20px;
     
 }
+
+
+h2.name {
+    color: #1d3557; /* Navy blue */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
 
 .new-post textarea {
     width: 100%;
@@ -109,5 +134,9 @@
     color: rgb(0, 0, 0); /* Replace 'red' with the color you want */
     text-align: center;
     margin-right: -23rem; /* Use 'rem' instead of 'px' */
+    display: flex;
+    margin-left: -400px;
+    justify-content: center;
+    align-items: flex-end;
 }
 

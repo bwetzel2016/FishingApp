@@ -1,58 +1,68 @@
-import { useState } from 'react';
-import './CreatePost.css'
-import { supabase } from '../client'
+import React, { useState } from 'react';
+import './CreatePost.css';
+import { supabase } from '../client';
 import { Link } from 'react-router-dom';
-const CreatePost = () => {
 
-    const [post, setPost] = useState({title: "", author: "", description: "", color:"" })
+const CreatePost = () => {
+    const [post, setPost] = useState({ name: "", location: "", description: "", photo: "" });
 
     const handleChange = (event) => {
-        const {name, value} = event.target;
-        setPost( (prev) => {
-            return {
-                ...prev,
-                [name]:value,
-            }
-        })
-    }
+        const { name, type } = event.target;
+        let value;
+
+        if (type === 'file') {
+            value = URL.createObjectURL(event.target.files[0]);
+        } else {
+            value = event.target.value;
+        }
+
+        setPost(prev => ({
+            ...prev,
+            [name]: value,
+        }));
+    };
+
     const createPost = async (event) => {
         event.preventDefault();
-      
-        await supabase
-          .from('Posts')
-          .insert({title: post.title, author: post.author, description: post.description})
-          .select();
-      
-       
-    }
 
-
-
+        try {
+            await supabase.from('Posts').insert(post);
+            console.log("Post created successfully!");
+            // Optionally, redirect the user or perform any other action upon successful post creation
+        } catch (error) {
+            console.error("Error creating post:", error.message);
+        }
+    };
 
     return (
         <div>
-            <Link to="/"><button className="headerBtn homeBtn"> Home  </button></Link>
-            <div className="header">
+            <Link to="/"><button className="headerBtn homeBtn"> Home </button></Link>
+            <div className="CreatePost-Header">
                 <form>
                     <div className="input-container">
-                        <label htmlFor="title">Title</label> <br />
-                        <input type="text" id="title" name="title" onChange={handleChange} /><br />
-                        <br/>
-    
-                        <label htmlFor="author">Author(Mph)</label><br />
-                        <input type="text" id="author" name="author" onChange={handleChange} /><br />
-                        <br/>
-    
-                        <label htmlFor="description">Description</label><br />
-                        <input type="text" id="description" name="description" onChange={handleChange} /><br />
-                        <br/>
+                        <label htmlFor="name">Name</label> <br />
+                        <input type="text" id="name" name="name" onChange={handleChange} /><br /><br />
+
+                        <label htmlFor="location">Location</label><br />
+                        <input type="text" id="location" name="location" onChange={handleChange} /><br /><br />
+
+                        <label htmlFor="description">Description of Bait</label><br />
+                        <select id="description" name="description" onChange={handleChange} className="description-input" >
+                            <option value="">Select a species</option>
+                            <option value="Salmon">Salmon</option>
+                            <option value="Trout">Trout</option>
+                            <option value="Bass">Bass</option>
+                            {/* Add more options as needed */}
+                        </select><br /><br />
+
+                        <label htmlFor="photo">Photo</label><br />
+                        <input type="file" id="photo" name="photo" onChange={handleChange} className="photo-input" /><br /><br />
                     </div>
                     <input type="submit" value="Submit" onClick={createPost} />
                 </form>
             </div>
         </div>
-    )
-    
-}
+    );
+};
 
-export default CreatePost
+export default CreatePost;

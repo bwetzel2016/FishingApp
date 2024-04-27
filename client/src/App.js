@@ -4,7 +4,7 @@ import { useRoutes } from 'react-router-dom'
 import ReadPosts from './pages/ReadPosts'
 import CreatePost from './pages/CreatePost'
 import EditPost from './pages/EditPost'
-
+import PostDetail from './pages/PostDetail'
 
 const App = () => {
   // Sets up routes
@@ -13,6 +13,13 @@ const App = () => {
       path: "/",
       element:<ReadPosts />
     },
+
+    {
+      path:"/post/:id", // New route for the detail view
+      element: <PostDetail />
+    },
+
+
     {
       path:"/edit/:id",
       element: <EditPost />

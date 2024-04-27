@@ -19,59 +19,78 @@ textarea {
     font-size: 20px;
 }
 
+
 input[type=submit] {
     width: 100%;
     height: 50px;
-    cursor: pointer;
     border-radius: 8px;
     border: 1px solid transparent;
     font-size: 20px;
     font-weight: 500;
     font-family: inherit;
     background-color: #1a1a1a;
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     cursor: pointer;
     transition: border-color 0.25s;
-    
     margin-top: 20px;
-  }
+    position: relative;
+    top: -70px; /* Adjusted to move the container up by 5 pixels */
+}
 
 input[type=submit]:hover {
     border-color: #0d103a;
 }
 
+
 .homeBtn {
-    position: absolute; /* Add this line */
-    right: 500px; /* Add this line */
-    top: 20px;
-    
+    position: absolute;
+    right: 20px;
+    top: 30px;
 }
 
-.header {
+
+.description-input {
+    border: 2px solid #000; /* Black border */
+    padding: 10px; /* Space inside the box */
+    background-color: #ffffff;
+    width: 100%; /* Increase the width to 100% */
+   
+}
+
+
+
+
+
+
+.photo-input {
+    border: 2px solid #000; /* Black border */
+    padding: 4px; /* Space inside the box */
+    background-color: #ffffff;
+}
+.CreatePost-Header {
     width: 100%;
     color: rgb(0, 0, 0);
     text-align: center;
     margin-top: 10rem;
-    margin-left: -140px;
     font-size: 20px;
-    
-
-
 }
 
-.form  {
-    font-size: 30px; /* Replace 20px with the font size you want */
-    
+.form {
+    font-size: 30px;
+      
 }
 
 .input-container {
     border: 1px solid #ccc;
     border-radius: 8px;
-    padding: 10px 280px; /* Adjust the padding as needed */
+    padding: 10px;
+    position: relative;
+    top: -60px; /* Adjusted to move the container up by 5 pixels */
+    
 }
 
 .input-container input {
-    width: 13rem; /* Set the width to 100% to make it fill the container */
-    height: 45px; /* Adjust the height as needed */
-    font-size: 20px; /* Adjust the font size as needed */
+    width: calc(100% - 20px);
+    height: 45px;
+    font-size: 20px;
 }
