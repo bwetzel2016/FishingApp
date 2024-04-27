@@ -16,38 +16,60 @@ const ReadPosts = () => {
     };
 
     useEffect(() => {
+        
         fetchPosts();
     }, []);
 
-    return (
-        
-        <div className="ReadPosts">
+    const handleLike = async (postId) => {
+        const { data, error } = await supabase
+            .from('Posts')
+            .update({ betCount: supabase.sql('betCount + 1') })
+            .eq('id', postId);
 
-            
-    <div className="ReadPosts-Header">
-    <div className="header-buttons">
-        <Link to="/"><button className="headerBtn"> Home </button></Link>
-        <Link to="/new"><button className="headerBtn"> Create Post 🏆 </button></Link>
-    </div>
-        <h1>Catch of the Day: The Ultimate Fishing Community</h1>
-        {
-            posts && posts.length > 0 ?
-            posts.map((post) => 
-                <Card 
-                    key={post.id} 
-                    id={post.id} 
-                    name={post.name} 
-                    location={post.location} 
-                    description={post.description}
-                    photo={post.photo}
-                />
-            ) : <div className="noPosts">No Posts</div>
+        if (error) {
+            console.error('Error updating post:', error);
+        } else {
+            const updatedPost = data[0];
+            setPosts((prevPosts) => {
+                return prevPosts.map((post) => {
+                    if (post.id === updatedPost.id) {
+                        return updatedPost;
+                    } else {
+                        return post;
+                    }
+                });
+            });
         }
-    </div>
-</div>
- 
-    )
-}
+    };
+
+    return (
+        <div className="ReadPosts">
+            <div className="ReadPosts-Header">
+                <div className="header-buttons">
+                    <Link to="/"><button className="headerBtn"> Home </button></Link>
+                    <Link to="/new"><button className="headerBtn"> Report a catch🏆 </button></Link>
+                </div>
+                <h1 className="anglerhub-heading">🎣 AnglerHub: The Ultimate Fishing Community 🎣</h1>
+                {
+                    
+                    posts && posts.length > 0 ?
+                    posts.map((post) => (
+                        <div key={post.id}>
+                            <Card 
+                                id={post.id} 
+                                name={post.name} 
+                                location={post.location} 
+                                description={post.description}
+                                betCount={post.betCount} 
+                                photo={post.photo}
+                            />
+                        </div>
+                    )) : <div className="noPosts">No Posts</div>
+                }
+            </div>
+        </div>
+    );
+};
 
 export default ReadPosts;
 

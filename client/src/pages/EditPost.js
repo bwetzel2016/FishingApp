@@ -51,7 +51,7 @@ const EditPost = ({data}) => {
                         <label htmlFor="location">Location</label><br />
                         <input type="text" id="location" name="location" onChange={handleChange} /><br /><br />
 
-                        <label htmlFor="description">Description of Bait</label><br />
+                        <label htmlFor="description">Species of fish </label><br />
                         <select id="description" name="description" onChange={handleChange} className="description-input" >
                             <option value="">Select a species</option>
                             <option value="Salmon">Salmon</option>

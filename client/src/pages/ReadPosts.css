@@ -1,32 +1,33 @@
 .ReadPosts {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center align the content horizontally */
-    align-items: flex-start; /* Align items to the top */
-    padding-top: 10px; /* Add some top padding */
-    min-height: calc(100vh - 100px); /* Set a minimum height to ensure content visibility */
+    flex-wrap: nowrap; /* Change this line */
+    overflow-x: auto; /* Add this line */
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10px;
+    min-height: calc(100vh - 100px);
+    
 }
-
 
 
 
 .ReadPosts-Header {
+    overflow-x: auto; /* Add this line */
     color: #1d3557;
-    top: 0; /* Ensures the header sticks at the top of the viewport */
-    background-color: transparent; /* Background color for the header */
-    z-index: 1; /* Ensures the header stays above other content */
-    padding: 1px 20px 300px 150px; /* Add some left padding */
-    text-align: center; /* Align text to the center */
-    width: 100%; /* Ensure the header spans the entire width */
-     top: 100px;
-     
+    top: 0;
+    background-color: transparent;
+    z-index: 1;
+    padding: 1px 20px 300px 150px;
+    text-align: center;
+    width: 100%;
+    top: 100px;
 }
 
 .header h1 {
-    margin: 0; /* Remove any default margin */
-    display: inline-block; /* Make the header inline block to center it */
-    width: 120%; /* Ensure the title takes the full width */
-    
+    overflow-x: auto; /* Add this line */
+    margin: 0;
+    display: inline-block;
+    width: 120%;
 }
 .header-buttons {
     display: flex;
@@ -38,8 +39,8 @@
 .headerBtn {
     padding: 5px 20px; /* Adjust the padding to make the buttons smaller */
     font-size: 16px;
-    background-color: #98c1d9; /* Light blue */
-    color: #7e2929;
+    background-color: #8d8d8d; /* Light blue */
+    color: #000000;
     margin-left: auto; /* Move the buttons to the right */
     border: none;
     border-radius: 15px;
@@ -61,8 +62,8 @@
 
 
 .Card {
-    background-color: #e0fbfc; /* Light cyan */
-    border: 5px solid #a8dadc; /* Light blue */
+    background-color: #b4aea5; /* Light cyan */
+    border: 5px solid #202121; /* Light blue */
     border-radius: 10px;
     padding: 2px;
     width: 70%; /* Adjust the width to make the card smaller */
@@ -70,17 +71,20 @@
     margin-bottom: 20px; /* Add bottom margin */
     margin-left: 200px;
 }
+
+
+
 .Card h3 {
     margin-top: 20px;
-    font-size: 20px;
-    color: #3d5a80; /* Dark blue */
+    font-size: 15px;
+    color: #000000; /* Dark blue */
     
 }
 
 .Card p {
     margin-bottom: 10px;
     font-size: 16px;
-    color: #1d3557; /* Navy blue */
+    color: #000000; /* Navy blue */
     
 }
 
@@ -100,9 +104,10 @@
 
 
 h2.name {
-    color: #1d3557; /* Navy blue */
+    color: #000000; /* Navy blue */
     text-align: center;
     margin-bottom: 20px;
+    font-size: 20px;
 }
 
 
@@ -131,12 +136,41 @@ h2.name {
     background-color: #457b9d; /* Steel blue on hover */
 }
 .noPosts {
-    color: rgb(0, 0, 0); /* Replace 'red' with the color you want */
+    font-size: 2em; /* Increase the font size */
+    color: rgb(0, 0, 0);
     text-align: center;
-    margin-right: -23rem; /* Use 'rem' instead of 'px' */
+    margin-right: -23rem;
     display: flex;
     margin-left: -400px;
     justify-content: center;
     align-items: flex-end;
+    font-weight: bold; 
+    margin-top: 80px; /* Add margin-top to move down */
 }
 
+
+
+.anglerhub-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.1em; /* Make the font larger */
+    font-weight: bold; /* Make the font bold */
+    color: #020202; /* Change the color to steel blue */
+    text-transform: uppercase; /* Make the text uppercase */
+    letter-spacing: 2px; /* Increase the spacing between letters */
+    margin: 5px 0; /* Add vertical margin and remove horizontal margin */
+
+    text-shadow: 2px 2px 4px rgba(10, 42, 149, 0.5); /* Add a shadow to the text */
+
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.anglerhub-heading {
+    animation: pulse 2s infinite;
+}

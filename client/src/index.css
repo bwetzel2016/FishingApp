@@ -6,4 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(140, 158, 186, 0.962);
+  background-image: url('/Users/brandonwetzel/github-classroom/COP4808-Spring2024-Full-Stack-Webdev/final-project-BwetzelFAU/client/public/wood4.jpeg');
+  
+   /* Add this line */
 }

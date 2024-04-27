@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './CreatePost.css';
 import { supabase } from '../client';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const CreatePost = () => {
+    const navigate = useNavigate(); // Initialize useNavigate
+
     const [post, setPost] = useState({ name: "", location: "", description: "", photo: "" });
 
     const handleChange = (event) => {
@@ -28,11 +30,14 @@ const CreatePost = () => {
         try {
             await supabase.from('Posts').insert(post);
             console.log("Post created successfully!");
-            // Optionally, redirect the user or perform any other action upon successful post creation
+            // Redirect the user to the readpost.js page
+            navigate('/'); 
         } catch (error) {
             console.error("Error creating post:", error.message);
         }
     };
+
+
 
     return (
         <div>
@@ -46,7 +51,7 @@ const CreatePost = () => {
                         <label htmlFor="location">Location</label><br />
                         <input type="text" id="location" name="location" onChange={handleChange} /><br /><br />
 
-                        <label htmlFor="description">Description of Bait</label><br />
+                        <label htmlFor="description">Species of fish</label><br />
                         <select id="description" name="description" onChange={handleChange} className="description-input" >
                             <option value="">Select a species</option>
                             <option value="Salmon">Salmon</option>

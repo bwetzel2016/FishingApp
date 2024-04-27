@@ -66,8 +66,18 @@
 .moreButton {
     width: 30px;
     float:right;
+    position: relative;
+    top: -175px;
+
+
+
+    
 
 }
 .moreButton:hover {
     cursor: pointer;
 }
+
+.likes {
+    text-align: left;
+  }

@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { supabase } from '../client';
 import './PostDetail.css';
-
+import { Link } from 'react-router-dom';
 const PostDetail = () => {
     const { id } = useParams();
     const [post, setPost] = useState(null);
@@ -40,15 +40,17 @@ const PostDetail = () => {
     };
 
     return post ? (
+        
         <div className="post-detail-container">
+            <Link to="/"><button className="headerBtn homeBtn"> Home </button></Link>
             <h1>{post.name}</h1>
-            <p>{post.author}</p>
+            <img src={post.photo} alt={post.name} /> {/* Display the photo */}
             {/* Other post details */}
             <button onClick={handleLike}>Like 👍 {post.betCount || 0}</button>
         </div>
     ) : (
         <div>Loading...</div>
     );
-};
-
+    
+}
 export default PostDetail;
