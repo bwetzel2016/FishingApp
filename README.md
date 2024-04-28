@@ -2,7 +2,7 @@
 
 Submitted by: **Brandon Wetzel**
 
-This web app: **insert description**
+The AnglerHub is a communityapplication for fishing enthusiasts, where users can share and view posts about their catches. It provides features to sort posts by votes or time, and a search functionality to find posts based on location.
 
 Time spent: **10** hours spent in total
 
@@ -26,8 +26,13 @@ The following **required** functionality is completed:
 
 
 
+## WebApp Link
+
+https://theanglerhub.netlify.app/ 
+
+
+
 ## Video Walkthrough
 
-
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='/Users/brandonwetzel/github-classroom/COP4808-Spring2024-Full-Stack-Webdev/final-project-BwetzelFAU/client/public/fissh.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
