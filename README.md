@@ -34,5 +34,5 @@ https://theanglerhub.netlify.app/
 
 ## Video Walkthrough
 
-<img src='/Users/brandonwetzel/github-classroom/COP4808-Spring2024-Full-Stack-Webdev/final-project-BwetzelFAU/client/public/fissh.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='/client/public/fissh.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
