@@ -26,7 +26,7 @@ const EditPost = ({data}) => {
             .update({ name: post.name, location: post.location,  description: post.description})
             .eq('id', id);
 
-        window.location = "https://theanglerhub.netlify.app/";
+        window.location = "http://localhost:3000/";
     }
 
     const deletePost = async (event) => {
@@ -37,7 +37,7 @@ const EditPost = ({data}) => {
             .delete()
             .eq('id', id); 
 
-        window.location = "https://theanglerhub.netlify.app/";
+        window.location = "http://localhost:3000/";
     }
 
     return (
