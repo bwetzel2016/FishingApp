@@ -2,14 +2,14 @@
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: #ceb692;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .post-detail-container h1 {
     font-size: 2em;
-    color: #333;
+    color: #000000;
 }
 
 .post-detail-container p {
@@ -24,4 +24,15 @@
 
 .nopost {
     font-size: 20px ;
+}
+.content-container {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+}
+h2.bait {
+    font-size: 2em;
+    color: #000000;
 }

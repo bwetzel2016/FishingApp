@@ -9,7 +9,7 @@ const Card = (props) => {
       <Link to={'/post/' + props.id}>
         <h2 className="name">{"Name: " + props.name}</h2>
         <h3 className="location">{"Location: " + props.location}</h3>
-        <h3 className="bait">{"Catch: " + props.description}</h3>
+        
       </Link>
       <div className="betCount">
       <h3 className="likes">Likes: {props.betCount}</h3>

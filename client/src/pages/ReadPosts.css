@@ -174,3 +174,11 @@ h2.name {
 .anglerhub-heading {
     animation: pulse 2s infinite;
 }
+
+.sort-button {
+    margin-left: -680px; /* Adjust this value to move the button to the left */
+}
+
+.card-container {
+    margin-top: 10px; /* Adjust this value to increase or decrease the gap */
+}
