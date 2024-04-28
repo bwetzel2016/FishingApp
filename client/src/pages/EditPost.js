@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { supabase } from '../client'
+import { useParams } from 'react-router-dom';
 import './EditPost.css'
-import { useNavigate, useParams } from 'react-router-dom';
 
 const EditPost = ({data}) => {
 
     const {id} = useParams();
     const [post, setPost] = useState({id: null, name: "", location: "", description: ""});
-    const navigate = useNavigate();
 
     const handleChange = (event) => {
         const {name, value} = event.target;
@@ -27,7 +26,7 @@ const EditPost = ({data}) => {
             .update({ name: post.name, location: post.location,  description: post.description})
             .eq('id', id);
 
-        navigate('/');
+        window.location = "/";
     }
 
     const deletePost = async (event) => {
@@ -38,9 +37,8 @@ const EditPost = ({data}) => {
             .delete()
             .eq('id', id); 
 
-        navigate('/');
+        window.location = "http://localhost:3000/";
     }
-
 
     return (
         <div>
