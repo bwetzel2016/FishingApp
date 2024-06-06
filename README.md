@@ -1,11 +1,31 @@
-AnglerHUB: The Ultimate Fishing Community
+# AnglerHUB: The Ultimate Fishing Community
 
-Submitted by: **Brandon Wetzel**
+
+## Description
 
 The AnglerHub is a community application for fishing enthusiasts, where users can share and view posts about their catches. It provides features to sort posts by votes, delete and update a post, and a search functionality to find posts based on location.
 
-Still in progress but showcase innovative features
 
+## Getting Started
+
+### Dependencies
+
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces.
+- [React Router](https://reactrouter.com/) - Declarative routing for React.
+- [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling.
+
+
+### Installing
+
+-Install Node.js.
+
+-npm install.
+
+### Run the application
+-npm run dev.
+
+## Authors
+Brandon Wetzel
 
 
 
